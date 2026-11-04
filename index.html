@@ -35,6 +35,15 @@ h2.sec{font-family:"Shippori Mincho B1",serif;font-size:26px;font-weight:800;col
 h2.sec + .sub{text-align:center;color:#6d675f;font-size:13.5px;margin:6px 0 22px;letter-spacing:.08em}
 .intro{background:#fff;border:1px solid #e9e2d2;border-radius:16px;padding:24px 26px;box-shadow:0 10px 30px rgba(60,50,20,.06)}
 .intro p{font-size:14.5px}
+.videorow{display:flex;gap:22px;align-items:flex-start;margin:18px 0 6px}
+.videomain{flex:1 1 auto;min-width:0}
+.videoshort{flex:0 0 270px}
+.videowrap16{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(60,50,20,.18);background:#000}
+.videowrap16 iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videowrap{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(60,50,20,.18);background:#000}
+.videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videocap{text-align:center;font-size:12px;color:#8a7a4d;margin-top:8px}
+@media(max-width:760px){.videorow{flex-direction:column}.videoshort{flex:none;width:270px;margin:0 auto}}
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 20px}
 .chip{border:1.5px solid var(--main);background:#fff;color:var(--main);border-radius:999px;padding:6px 16px;font-size:13.5px;font-weight:700;cursor:pointer}
 .chip.on{background:var(--main);color:#fff}
@@ -60,6 +69,12 @@ h2.sec + .sub{text-align:center;color:#6d675f;font-size:13.5px;margin:6px 0 22px
 .note{font-size:12px;color:#98917f}
 .btn{display:block;text-align:center;background:linear-gradient(135deg,var(--main),var(--deep));color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 10px;font-size:14.5px;box-shadow:0 6px 16px rgba(40,35,60,.22)}
 .btn:hover{opacity:.92}
+.pr{display:inline-block;font-size:10.5px;color:#8a8578;border:1px solid #d8d2c2;border-radius:4px;padding:1px 6px;margin-bottom:6px}
+.adband{margin:26px 0 2px;text-align:center}
+.adlabel{display:block;font-size:11px;color:#98917f;letter-spacing:.2em;margin-bottom:6px}
+.adgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;justify-items:center}
+.aditem{max-width:100%;overflow:hidden}
+.prs{font-size:13px;color:#b8860b}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .step{background:#fff;border:1px solid #e9e2d2;border-radius:14px;padding:20px}
 .step .n{font-family:"Shippori Mincho B1",serif;color:var(--gold);font-size:24px;font-weight:800}
@@ -103,6 +118,19 @@ footer a{color:#f3d98b}
 <p class="sub">ABOUT</p>
 <div class="intro"><p>日本三景・松島を擁し、三陸の豊かな漁場と仙台平野の実りに恵まれた宮城県。ふるなびで人気・評価の高い返礼品を中心に、牛タンや仙台牛などの名物グルメから地酒・伝統工芸まで、全20品をおすすめ順に紹介します。 寄付額は調査時点の各寄付ページの表示です。最新の寄付額・受付状況は寄付ページでご確認ください。並び順は人気・知名度・カテゴリのバランスを考慮したおすすめ順です。</p></div>
 </section>
+<section>
+<h2 class="sec">選び方の参考に</h2>
+<p class="sub">HOW TO CHOOSE</p>
+<div class="intro"><p>ひろゆき流のふるさと納税の選び方を解説した動画です。「自分の金では絶対買わないものを選ぶ」のがコツだそうです。返礼品選びの参考に、本編とショートの両方を載せています。</p>
+<div class="videorow">
+<div class="videomain"><div class="videowrap16"><iframe src="https://www.youtube.com/embed/FfvkQaBZvpU" title="ひろゆき流ふるさと納税の選び方 自腹では買わないものを選べ" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<p class="videocap">本編：「ひろゆき流ふるさと納税の選び方 自腹では買わないものを選べ」</p></div>
+<div class="videoshort"><div class="videowrap"><iframe src="https://www.youtube.com/embed/Pn6J6UMdyiY" title="ふるさと納税は自腹で買わないものを選べ" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<p class="videocap">ショート：「ふるさと納税は自腹で買わないものを選べ」</p></div>
+</div>
+<p class="videocap">動画はいずれも切り抜きチャンネル「ひろゆきのてつ学」より</p></div>
+</section>
+
 <section>
 <h2 class="sec">宮城県の返礼品ランキング</h2>
 <p class="sub">TOP 20</p>
@@ -339,6 +367,7 @@ footer a{color:#f3d98b}
 <div class="step"><div class="n">03</div><h4>書類の手続き</h4><p>ワンストップ特例の申請書を自治体へ送るか、確定申告で寄付金控除を申請します。返礼品と受領証明書が届きます。</p></div>
 </div>
 </section>
+
 <section>
 <h2 class="sec">よくある質問</h2>
 <p class="sub">FAQ</p>
@@ -351,12 +380,12 @@ footer a{color:#f3d98b}
 <section>
 <h2 class="sec">他の都道府県の返礼品</h2>
 <p class="sub">ALL PREFECTURES</p>
-<div class="sisters"><a href="https://tk-ramen.github.io/japan-furusato-ranking/">全国ふるさと納税返礼品ランキング（総合ハブ）</a><a href="https://tk-ramen.github.io/hokkaido-furusato-ranking/">北海道の返礼品20選</a></div>
+<div class="sisters"><a href="https://tk-ramen.github.io/japan-furusato-ranking/">全国ふるさと納税返礼品ランキング（総合ハブ）</a><a href="https://tk-ramen.github.io/hokkaido-furusato-ranking/">北海道の返礼品20選</a><a href="https://tk-ramen.github.io/akita-furusato-ranking/">秋田県の返礼品20選</a><a href="https://tk-ramen.github.io/aomori-furusato-ranking/">青森県の返礼品20選</a><a href="https://tk-ramen.github.io/yamagata-furusato-ranking/">山形県の返礼品20選</a><a href="https://tk-ramen.github.io/ibaraki-furusato-ranking/">茨城県の返礼品20選</a><a href="https://tk-ramen.github.io/iwate-furusato-ranking/">岩手県の返礼品20選</a><a href="https://tk-ramen.github.io/gunma-furusato-ranking/">群馬県の返礼品20選</a><a href="https://tk-ramen.github.io/fukushima-furusato-ranking/">福島県の返礼品20選</a><a href="https://tk-ramen.github.io/tochigi-furusato-ranking/">栃木県の返礼品20選</a><a href="https://tk-ramen.github.io/kanagawa-furusato-ranking/">神奈川県の返礼品20選</a><a href="https://tk-ramen.github.io/tokyo-furusato-ranking/">東京都の返礼品20選</a><a href="https://tk-ramen.github.io/chiba-furusato-ranking/">千葉県の返礼品20選</a><a href="https://tk-ramen.github.io/saitama-furusato-ranking/">埼玉県の返礼品20選</a><a href="https://tk-ramen.github.io/mie-furusato-ranking/">三重県の返礼品20選</a><a href="https://tk-ramen.github.io/shizuoka-furusato-ranking/">静岡県の返礼品20選</a><a href="https://tk-ramen.github.io/nagano-furusato-ranking/">長野県の返礼品20選</a><a href="https://tk-ramen.github.io/yamanashi-furusato-ranking/">山梨県の返礼品20選</a><a href="https://tk-ramen.github.io/gifu-furusato-ranking/">岐阜県の返礼品20選</a><a href="https://tk-ramen.github.io/fukui-furusato-ranking/">福井県の返礼品20選</a><a href="https://tk-ramen.github.io/ishikawa-furusato-ranking/">石川県の返礼品20選</a><a href="https://tk-ramen.github.io/niigata-furusato-ranking/">新潟県の返礼品20選</a><a href="https://tk-ramen.github.io/aichi-furusato-ranking/">愛知県の返礼品20選</a><a href="https://tk-ramen.github.io/osaka-furusato-ranking/">大阪府の返礼品20選</a><a href="https://tk-ramen.github.io/kyoto-furusato-ranking/">京都府の返礼品20選</a><a href="https://tk-ramen.github.io/toyama-furusato-ranking/">富山県の返礼品20選</a><a href="https://tk-ramen.github.io/miyazaki-furusato-ranking/">宮崎県の返礼品20選</a><a href="https://tk-ramen.github.io/oita-furusato-ranking/">大分県の返礼品20選</a><a href="https://tk-ramen.github.io/saga-furusato-ranking/">佐賀県の返礼品20選</a><a href="https://tk-ramen.github.io/kagoshima-furusato-ranking/">鹿児島県の返礼品20選</a><a href="https://tk-ramen.github.io/okinawa-furusato-ranking/">沖縄県の返礼品20選</a><a href="https://tk-ramen.github.io/shimane-furusato-ranking/">島根県の返礼品20選</a><a href="https://tk-ramen.github.io/hyogo-furusato-ranking/">兵庫県の返礼品20選</a><a href="https://tk-ramen.github.io/ehime-furusato-ranking/">愛媛県の返礼品20選</a><a href="https://tk-ramen.github.io/kagawa-furusato-ranking/">香川県の返礼品20選</a><a href="https://tk-ramen.github.io/shiga-furusato-ranking/">滋賀県の返礼品20選</a><a href="https://tk-ramen.github.io/tottori-furusato-ranking/">鳥取県の返礼品20選</a><a href="https://tk-ramen.github.io/wakayama-furusato-ranking/">和歌山県の返礼品20選</a><a href="https://tk-ramen.github.io/kochi-furusato-ranking/">高知県の返礼品20選</a><a href="https://tk-ramen.github.io/nara-furusato-ranking/">奈良県の返礼品20選</a><a href="https://tk-ramen.github.io/tokushima-furusato-ranking/">徳島県の返礼品20選</a><a href="https://tk-ramen.github.io/fukuoka-furusato-ranking/">福岡県の返礼品20選</a><a href="https://tk-ramen.github.io/okayama-furusato-ranking/">岡山県の返礼品20選</a><a href="https://tk-ramen.github.io/hiroshima-furusato-ranking/">広島県の返礼品20選</a><a href="https://tk-ramen.github.io/nagasaki-furusato-ranking/">長崎県の返礼品20選</a><a href="https://tk-ramen.github.io/yamaguchi-furusato-ranking/">山口県の返礼品20選</a><a href="https://tk-ramen.github.io/kumamoto-furusato-ranking/">熊本県の返礼品20選</a></div>
 </section>
 </div>
 <footer><div class="in">
 <div class="serif" style="font-size:16px">宮城県のふるさと納税 人気返礼品20選</div>
-<p class="disc">本ページの寄付額・返礼品情報は調査時点のもので、変更される場合があります。寄付のお申し込み前に、リンク先のポータルサイトで最新の寄付額・内容・受付状況をご確認ください。ふるさと納税の控除には上限額があります。ご自身の控除上限額は各ポータルサイトのシミュレーション等でご確認ください。</p>
+<p class="disc">本ページの寄付額・返礼品情報は調査時点のもので、変更される場合があります。寄付のお申し込み前に、リンク先のポータルサイトで最新の寄付額・内容・受付状況をご確認ください。ふるさと納税の控除には上限額があります。ご自身の控除上限額は各ポータルサイトのシミュレーション等でご確認ください。当サイトのリンクにはアフィリエイト（広告）リンクが含まれる場合があります。</p>
 <p class="credit">Hero photo: “Matsushima Bay - Matsushima6233.jpg” by lumoplank (Wikimedia Commons), CC0 1.0</p>
 </div></footer>
 <script>
